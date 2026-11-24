@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ícone Linear Minimalista: Uniforme Oficial GDI -->
+  <!-- Contorno da Camisa com Mangas -->
+  <path d="M6 4L2 8L5 11L7 9.5V20C7 20.5523 7.44772 21 8 21H16C16.5523 21 17 20.5523 17 20V9.5L19 11L22 8L18 4H15C15 5.65685 13.6569 7 12 7C10.3431 7 9 5.65685 9 4H6Z"/>
+  <!-- Friso / Detalhe da Gola em V -->
+  <path d="M9 4C9 5.65685 10.3431 7 12 7C13.6569 7 15 4 15 4"/>
+  <!-- Faixas / Listras Táticas Centrais Sutis -->
+  <line x1="12" y1="10" x2="12" y2="17"/>
+  <!-- Escudo no Peito Esquerdo -->
+  <circle cx="9.5" cy="11.5" r="1" fill="currentColor"/>
+</svg>

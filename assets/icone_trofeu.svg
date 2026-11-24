@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ícone Linear Minimalista: Troféu / Taça de Campeão -->
+  <!-- Taça / Bojo Central -->
+  <path d="M7 4H17V9C17 11.7614 14.7614 14 12 14C9.23858 14 7 11.7614 7 9V4Z"/>
+  <!-- Alça Esquerda -->
+  <path d="M7 5H4.5C3.67157 5 3 5.67157 3 6.5C3 8.433 4.567 10 6.5 10H7"/>
+  <!-- Alça Direita -->
+  <path d="M17 5H19.5C20.3284 5 21 5.67157 21 6.5C21 8.433 19.433 10 17.5 10H17"/>
+  <!-- Haste / Coluna -->
+  <path d="M12 14V18"/>
+  <!-- Base Escalonada -->
+  <path d="M9 18H15"/>
+  <path d="M7 21H17"/>
+  <!-- Estrela de Conquista no Centro -->
+  <path d="M12 7.5L12.5 8.7L13.8 8.7L12.8 9.5L13.2 10.7L12 10L10.8 10.7L11.2 9.5L10.2 8.7L11.5 8.7Z" fill="currentColor"/>
+</svg>

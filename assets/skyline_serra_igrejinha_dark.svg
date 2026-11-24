@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 360" fill="none">
+  <!-- Assinatura Visual Oficial: Skyline Aglomerado da Serra & Igrejinha do Cafezal (Versão Dark / Linhas Claras) -->
+  <!-- Referência: Igrejinha do Cafezal (Paróquia Santa Dulce dos Pobres, Rua Serenata, 68), Beco da Igrejinha, Ladeiras, Escadões e Serra do Curral -->
+  <title>Skyline do Aglomerado da Serra: Igrejinha do Cafezal, ladeiras com escadões e Serra do Curral</title>
+  <defs>
+    <linearGradient id="fadeStrokeDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#94A3B8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="fillSerraDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#292F63" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0F141A" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Camada 1: Cume e Silhueta Monumental da Serra do Curral -->
+  <path d="M0,210 Q260,120 540,150 T1040,115 T1520,145 Q1740,165 1920,185 L1920,360 L0,360 Z" fill="url(#fillSerraDark)"/>
+  <path d="M0,210 Q260,120 540,150 T1040,115 T1520,145 Q1740,165 1920,185" stroke="#64748B" stroke-width="1.2" stroke-dasharray="6 8" opacity="0.5"/>
+
+  <!-- Camada 2: Relevo das Encostas e Ladeiras do Cafezal -->
+  <path d="M0,250 C220,225 380,200 620,220 C820,235 900,195 1060,180 C1220,195 1420,240 1660,215 C1780,200 1860,225 1920,245" stroke="url(#fadeStrokeDark)" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- Camada 3: Geometria dos Casarios em Camadas com Textura de Tijolo Aparente -->
+  <!-- Setor Esquerdo: Ladeiras em Declive com Escadões -->
+  <g stroke="url(#fadeStrokeDark)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <!-- Casarios Baixos e Intermediários -->
+    <path d="M30,310 L30,280 L65,280 L65,265 L105,265 L105,295 L145,295 L145,260 L185,260 L185,285 L225,285 L225,250 L270,250 L270,275 L310,275 L310,240 L355,240 L355,270 L395,270 L395,235 L440,235 L440,265 L485,265 L485,230 L530,230 L530,260 L575,260 L575,225 L620,225 L620,255 L665,255 L665,220 L710,220 L710,250 L755,250 L755,215 L800,215 L800,245 L845,245 L845,210 L890,210 L890,240"/>
+    
+    <!-- Linhas Sutis de Tijolo Aparente / Camadas de Laje (Esquerda) -->
+    <line x1="70" y1="272" x2="100" y2="272" stroke-width="0.7" opacity="0.45"/>
+    <line x1="150" y1="268" x2="180" y2="268" stroke-width="0.7" opacity="0.45"/>
+    <line x1="230" y1="258" x2="265" y2="258" stroke-width="0.7" opacity="0.45"/>
+    <line x1="315" y1="248" x2="350" y2="248" stroke-width="0.7" opacity="0.45"/>
+    <line x1="400" y1="242" x2="435" y2="242" stroke-width="0.7" opacity="0.45"/>
+    <line x1="490" y1="238" x2="525" y2="238" stroke-width="0.7" opacity="0.45"/>
+    <line x1="580" y1="232" x2="615" y2="232" stroke-width="0.7" opacity="0.45"/>
+    <line x1="670" y1="228" x2="705" y2="228" stroke-width="0.7" opacity="0.45"/>
+    <line x1="760" y1="222" x2="795" y2="222" stroke-width="0.7" opacity="0.45"/>
+
+    <!-- Escadão Típico da Serra 1 (Ladeira Esquerda) -->
+    <path d="M225,285 L233,285 L233,292 L241,292 L241,299 L249,299 L249,306 L257,306 L257,313 L265,313" stroke-width="0.9" opacity="0.6"/>
+    <!-- Escadão Típico da Serra 2 (Acesso ao Beco) -->
+    <path d="M530,260 L538,260 L538,268 L546,268 L546,276 L554,276 L554,284 L562,284 L562,292" stroke-width="0.9" opacity="0.6"/>
+    <!-- Escadão Típico da Serra 3 (Subida do Cafezal) -->
+    <path d="M800,245 L808,245 L808,253 L816,253 L816,261 L824,261 L824,269 L832,269 L832,277" stroke-width="0.9" opacity="0.6"/>
+  </g>
+
+  <!-- O MARCO HISTÓRICO: IGREJINHA DO CAFEZAL (Paróquia Santa Dulce dos Pobres / Beco da Igrejinha) -->
+  <!-- Ponto Alto do Relevo (X: 915 a 1005) -->
+  <g stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Platô da Rua Serenata / Base da Igrejinha -->
+    <line x1="900" y1="240" x2="1020" y2="240" stroke-width="1.8"/>
+    <!-- Corpo Principal / Nave da Igrejinha -->
+    <path d="M922,240 L922,198 L950,198 L950,145 L978,145 L978,198 L1002,198 L1002,240" stroke-width="2.0"/>
+    <!-- Telhado em Duas Águas / Frontão Tradicional -->
+    <path d="M920,198 L962,170 L1004,198" stroke-width="1.8"/>
+    
+    <!-- Torre Central do Campanário (Torre dos Sinos) -->
+    <path d="M950,145 L950,118 L976,118 L976,145" stroke-width="1.8"/>
+    <!-- Telhado Piramidal / Cúpula da Torre -->
+    <path d="M947,118 L963,98 L979,118 Z" stroke-width="1.8" fill="none"/>
+    <!-- Cruz Missionária no Topo da Torre -->
+    <path d="M963,98 L963,74 M956,84 L970,84" stroke-width="2.2"/>
+    
+    <!-- Portal em Arco da Fachada -->
+    <path d="M955,240 L955,216 C955,210 971,210 971,216 L971,240" stroke-width="1.6"/>
+    <!-- Óculo Circular Superior -->
+    <circle cx="963" cy="186" r="5" stroke-width="1.5" fill="none"/>
+    <!-- Vão do Sino / Abertura do Campanário -->
+    <path d="M958,138 L958,127 C958,124 968,124 968,127 L968,138" stroke-width="1.3"/>
+    <circle cx="963" cy="132" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Escadão Principal de Chegada ao Beco da Igrejinha -->
+    <path d="M900,240 L892,240 L892,248 L884,248 L884,256 L876,256 L876,264 L868,264 L868,272 L860,272" stroke-width="1.2" opacity="0.85"/>
+  </g>
+
+  <!-- Setor Direito: Encosta Leste com Ruelas, Casarios e Escadões -->
+  <g stroke="url(#fadeStrokeDark)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M1020,240 L1020,210 L1060,210 L1060,245 L1105,245 L1105,215 L1150,215 L1150,250 L1195,250 L1195,220 L1240,220 L1240,255 L1285,255 L1285,225 L1330,225 L1330,260 L1375,260 L1375,230 L1420,230 L1420,265 L1465,265 L1465,235 L1510,235 L1510,270 L1555,270 L1555,240 L1600,240 L1600,275 L1645,275 L1645,245 L1690,245 L1690,280 L1735,280 L1735,255 L1780,255 L1780,285 L1825,285 L1825,265 L1870,265 L1870,295 L1920,295"/>
+
+    <!-- Textura de Tijolo Aparente / Modulação (Direita) -->
+    <line x1="1025" y1="218" x2="1055" y2="218" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1110" y1="222" x2="1145" y2="222" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1200" y1="228" x2="1235" y2="228" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1290" y1="232" x2="1325" y2="232" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1380" y1="238" x2="1415" y2="238" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1470" y1="242" x2="1505" y2="242" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1560" y1="248" x2="1595" y2="248" stroke-width="0.7" opacity="0.45"/>
+    <line x1="1650" y1="252" x2="1685" y2="252" stroke-width="0.7" opacity="0.45"/>
+
+    <!-- Escadões da Encosta Leste -->
+    <path d="M1060,245 L1068,245 L1068,253 L1076,253 L1076,261 L1084,261 L1084,269 L1092,269 L1092,277" stroke-width="0.9" opacity="0.6"/>
+    <path d="M1330,260 L1338,260 L1338,268 L1346,268 L1346,276 L1354,276 L1354,284 L1362,284 L1362,292" stroke-width="0.9" opacity="0.6"/>
+    <path d="M1600,275 L1608,275 L1608,283 L1616,283 L1616,291 L1624,291 L1624,299 L1632,299 L1632,307" stroke-width="0.9" opacity="0.6"/>
+  </g>
+
+  <!-- Linha de Base Sutil do Horizonte Inferior -->
+  <line x1="0" y1="320" x2="1920" y2="320" stroke="#334155" stroke-width="1" opacity="0.5"/>
+</svg>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 380" fill="none">
+  <title>Silhueta Autêntica do Aglomerado da Serra — Relevo e Arquitetura Vernacular Real</title>
+  <defs>
+    <linearGradient id="skylineDarkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#94A3B8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="hillFillDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#292F63" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#070A12" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="terracottaAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CC3326" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#E27358" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Camada 1: O Relevo Monumental do Morro da Serra (Cume e Encosta) -->
+  <path d="M520,290 C680,240 850,160 1100,105 C1320,55 1580,75 1780,125 C1860,145 1900,165 1920,180 L1920,380 L520,380 Z" fill="url(#hillFillDark)"/>
+  <path d="M520,290 C680,240 850,160 1100,105 C1320,55 1580,75 1780,125 C1860,145 1900,165 1920,180" stroke="url(#skylineDarkGrad)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Camada 2: A Trama Densa dos Casarios em Camadas na Encosta (Casas Escalonadas do Topo à Meia Encosta) -->
+  <g stroke="url(#skylineDarkGrad)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
+    <!-- Topo da Colina (Casas mais altas) -->
+    <path d="M980,135 L980,118 L1015,118 L1015,130 L1050,130 L1050,112 L1090,112 L1090,125 L1130,125 L1130,105 L1175,105 L1175,120 L1220,120 L1220,98 L1265,98 L1265,115 L1310,115 L1310,102 L1355,102 L1355,122 L1400,122 L1400,110 L1445,110 L1445,128 L1490,128 L1490,118 L1535,118 L1535,135 L1580,135 L1580,125 L1625,125 L1625,142"/>
+    
+    <!-- Camada Intermediária Alta -->
+    <path d="M860,185 L860,165 L900,165 L900,150 L945,150 L945,170 L990,170 L990,148 L1035,148 L1035,162 L1080,162 L1080,140 L1125,140 L1125,158 L1170,158 L1170,138 L1215,138 L1215,152 L1260,152 L1260,132 L1305,132 L1305,150 L1350,150 L1350,135 L1395,135 L1395,155 L1440,155 L1440,142 L1485,142 L1485,160 L1530,160 L1530,148 L1575,148 L1575,168 L1620,168 L1620,155 L1665,155 L1665,175 L1710,175 L1710,162 L1755,162 L1755,185 L1800,185 L1800,172 L1845,172 L1845,195"/>
+
+    <!-- Camada Central da Encosta -->
+    <path d="M720,235 L720,215 L765,215 L765,198 L810,198 L810,218 L855,218 L855,195 L900,195 L900,212 L945,212 L945,190 L990,190 L990,208 L1035,208 L1035,188 L1080,188 L1080,205 L1125,205 L1125,182 L1170,182 L1170,200 L1215,200 L1215,180 L1260,180 L1260,198 L1305,198 L1305,178 L1350,178 L1350,195 L1395,195 L1395,175 L1440,175 L1440,192 L1485,192 L1485,170 L1530,170 L1530,188 L1575,188 L1575,175 L1620,175 L1620,198 L1665,198 L1665,185 L1710,185 L1710,210 L1755,210 L1755,195 L1800,195 L1800,220 L1845,220 L1845,205 L1890,205 L1890,230"/>
+
+    <!-- Camada Baixa da Encosta -->
+    <path d="M580,290 L580,268 L625,268 L625,250 L670,250 L670,270 L715,270 L715,248 L760,248 L760,265 L805,265 L805,242 L850,242 L850,260 L895,260 L895,238 L940,238 L940,255 L985,255 L985,232 L1030,232 L1030,250 L1075,250 L1075,228 L1120,228 L1120,245 L1165,245 L1165,225 L1210,225 L1210,242 L1255,242 L1255,220 L1300,220 L1300,238 L1345,238 L1345,218 L1390,218 L1390,235 L1435,235 L1435,215 L1480,215 L1480,232 L1525,232 L1525,210 L1570,210 L1570,230 L1615,230 L1615,218 L1660,218 L1660,240 L1705,240 L1705,225 L1750,225 L1750,248 L1795,248 L1795,235 L1840,235 L1840,255 L1885,255 L1885,242 L1920,242"/>
+
+    <!-- Escadões Típicos Ligando os Platôs (Zigue-zague vertical de pedestres) -->
+    <path d="M810,198 L810,204 L818,204 L818,211 L826,211 L826,218 M826,218 L826,225 L834,225 L834,232 L842,232 L842,242" stroke-width="0.9" opacity="0.6"/>
+    <path d="M1170,158 L1170,164 L1178,164 L1178,171 L1186,171 L1186,182 M1186,182 L1186,188 L1194,188 L1194,195 L1202,195 L1202,205" stroke-width="0.9" opacity="0.6"/>
+    <path d="M1530,160 L1530,166 L1538,166 L1538,173 L1546,173 L1546,188 M1546,188 L1546,194 L1554,194 L1554,201 L1562,201 L1562,212" stroke-width="0.9" opacity="0.6"/>
+  </g>
+
+  <!-- Camada 3: A Estrada em Curva no Fundo do Vale (Conexão da Grota / Rua Serenata) -->
+  <path d="M420,380 C460,330 490,295 530,285 C570,275 620,310 650,335 C670,350 710,380 750,380" stroke="#CC3326" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M435,380 C472,333 498,300 535,290 C572,280 615,313 645,338 C665,353 700,380 735,380" stroke="#FFFFFF" stroke-width="0.9" stroke-dasharray="6 8" opacity="0.6"/>
+
+  <!-- Camada 4: O Primeiro Plano Exato da Foto (Casa em Tijolo Aparente + Caixa d'Água sobre Pilotis) -->
+  <g stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Estrutura Principal da Casa de Tijolo em Primeiro Plano (Esquerda) -->
+    <!-- Parede frontal e lateral -->
+    <path d="M0,230 L110,185 L320,185 L320,380 L0,380 Z" fill="#0E1322" fill-opacity="0.95" stroke="url(#skylineDarkGrad)" stroke-width="2.0"/>
+    
+    <!-- Lajes e Divisões de Andares -->
+    <line x1="0" y1="300" x2="320" y2="300" stroke="url(#skylineDarkGrad)" stroke-width="1.6"/>
+    
+    <!-- Telhado Inclinado de Fibrocimento / Telhas Onduladas à Esquerda -->
+    <path d="M0,230 L110,185 L115,190 L5,235 Z" fill="#CC3326" fill-opacity="0.3" stroke="#CC3326" stroke-width="1.4"/>
+    
+    <!-- Janelas Retangulares Características com Grades Verticais -->
+    <rect x="180" y="210" width="35" height="55" stroke="url(#skylineDarkGrad)" stroke-width="1.4" fill="#070A12"/>
+    <line x1="197" y1="210" x2="197" y2="265" stroke="url(#skylineDarkGrad)" stroke-width="1.0" opacity="0.6"/>
+    
+    <rect x="245" y="210" width="40" height="55" stroke="url(#skylineDarkGrad)" stroke-width="1.4" fill="#070A12"/>
+    <line x1="265" y1="210" x2="265" y2="265" stroke="url(#skylineDarkGrad)" stroke-width="1.0" opacity="0.6"/>
+
+    <rect x="245" y="320" width="40" height="50" stroke="url(#skylineDarkGrad)" stroke-width="1.4" fill="#070A12"/>
+
+    <!-- A Caixa d'Água Cilíndrica Típica do Terraço sobre Pilotis (O Ícone Vernacular Real) -->
+    <!-- Pilotis / Pilares de Concreto na Laje -->
+    <line x1="225" y1="185" x2="225" y2="152" stroke="url(#skylineDarkGrad)" stroke-width="2.0"/>
+    <line x1="250" y1="185" x2="250" y2="152" stroke="url(#skylineDarkGrad)" stroke-width="2.0"/>
+    <line x1="275" y1="185" x2="275" y2="152" stroke="url(#skylineDarkGrad)" stroke-width="2.0"/>
+    
+    <!-- Corpo da Caixa d'Água Cilíndrica -->
+    <rect x="215" y="112" width="70" height="40" rx="4" stroke="#FFFFFF" stroke-width="2.0" fill="#292F63" fill-opacity="0.4"/>
+    <!-- Frisos Horizontais de Reforço da Caixa -->
+    <line x1="215" y1="125" x2="285" y2="125" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7"/>
+    <line x1="215" y1="138" x2="285" y2="138" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7"/>
+    <!-- Tampa Superior Cilíndrica -->
+    <path d="M212,112 C212,106 288,106 288,112 Z" stroke="#FFFFFF" stroke-width="1.8" fill="#CC3326" fill-opacity="0.5"/>
+
+    <!-- Linhas Moduladas de Alvenaria (Textura Real de Tijolo Furado Aparente) -->
+    <g stroke="url(#terracottaAccent)" stroke-width="0.8" opacity="0.5">
+      <line x1="125" y1="205" x2="165" y2="205"/>
+      <line x1="125" y1="225" x2="165" y2="225"/>
+      <line x1="125" y1="245" x2="165" y2="245"/>
+      <line x1="125" y1="265" x2="165" y2="265"/>
+      <line x1="125" y1="285" x2="165" y2="285"/>
+
+      <line x1="125" y1="315" x2="230" y2="315"/>
+      <line x1="125" y1="335" x2="230" y2="335"/>
+      <line x1="125" y1="355" x2="230" y2="355"/>
+      <line x1="125" y1="375" x2="230" y2="375"/>
+    </g>
+
+    <!-- Fiação Aérea Típica dos Postes Comunitários -->
+    <path d="M320,260 Q420,275 520,270 T750,260" stroke="#475569" stroke-width="0.7" opacity="0.45"/>
+    <path d="M320,270 Q430,290 530,285 T750,275" stroke="#475569" stroke-width="0.7" opacity="0.45"/>
+  </g>
+
+  <!-- Assinatura Tipográfica Discreta no Canto -->
+  <text x="1890" y="365" text-anchor="end" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1.5">AGLOMERADO DA SERRA • BH / MG</text>
+</svg>

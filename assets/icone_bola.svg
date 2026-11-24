@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ícone Linear Minimalista: Bola de Futebol Clássica -->
+  <!-- Círculo Externo da Bola -->
+  <circle cx="12" cy="12" r="9"/>
+  <!-- Pentágono Central -->
+  <path d="M12 9.5L14.377 11.227L13.469 14.023H10.531L9.623 11.227L12 9.5Z"/>
+  <!-- Raios / Conexões dos Gomos para as Bordas -->
+  <line x1="12" y1="9.5" x2="12" y2="3"/>
+  <line x1="14.377" y1="11.227" x2="20.08" y2="9.37"/>
+  <line x1="13.469" y1="14.023" x2="17.29" y2="18.91"/>
+  <line x1="10.531" y1="14.023" x2="6.71" y2="18.91"/>
+  <line x1="9.623" y1="11.227" x2="3.92" y2="9.37"/>
+</svg>
