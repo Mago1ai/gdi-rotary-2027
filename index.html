@@ -2,7 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="GDI em Campo">
+  <meta name="theme-color" content="#07090E">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./manifest.json">
   <title>GDI em Campo 2027 — Proposta Oficial | Rotary International</title>
   <meta name="description" content="Proposta de patrocínio esportivo da Escolinha GDI ao Rotary International para a Temporada 2027 no Aglomerado da Serra, Belo Horizonte.">
   <meta property="og:title" content="GDI em Campo 2027 — Não é só futebol. É sobre oportunidade.">
@@ -68,6 +74,35 @@
       --font-heading: 'Oswald', sans-serif;
       --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-data: 'Inter', monospace;
+    }
+
+    
+    /* BLINDAGEM PWA & EXPERIÊNCIA NATIVA IPHONE */
+    html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden !important;
+      overscroll-behavior-x: none !important;
+      touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    *, *::before, *::after {
+      max-width: 100%;
+    }
+
+    /* Feedback tátil nativo em botões */
+    button, a.btn-red, a.btn-outline, .lang-btn, .curr-pill, .sim-opt-btn {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    button:active, a.btn-red:active, a.btn-outline:active, .lang-btn:active, .curr-pill:active, .sim-opt-btn:active {
+      transform: scale(0.96) !important;
     }
 
     *, *::before, *::after {
@@ -137,6 +172,60 @@
       justify-content: space-between;
       height: 74px;
       gap: 16px;
+    }
+
+    
+    .brand-duo-logos {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .logo-gdi-top {
+      height: 62px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 10px rgba(0,0,0,0.6));
+      transition: transform 0.25s ease;
+    }
+
+    .brand-duo-logos:hover .logo-gdi-top {
+      transform: scale(1.05);
+    }
+
+    .brand-duo-sep {
+      width: 1px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .logo-rotary-top {
+      height: 44px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+      transition: transform 0.25s ease;
+    }
+
+    .brand-duo-logos:hover .logo-rotary-top {
+      transform: scale(1.05);
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-family: var(--font-data);
+      font-size: 0.68rem;
+      color: var(--rotary-gold);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 2px;
     }
 
     .nav-brand {
@@ -1637,12 +1726,50 @@
     }
 
     @media (max-width: 640px) {
-      .nav-brand .brand-title { font-size: 1.15rem; }
-      .nav-brand img.logo-gdi { height: 32px; }
-      .nav-brand .brand-tag { display: none; }
-      .lang-switcher .lang-btn .lang-code { display: none; }
-      .lang-switcher .lang-btn { padding: 4px 6px; }
-      .mobile-menu-btn { flex-shrink: 0; padding: 6px 10px; font-size: 1.1rem; }
+      .navbar-inner {
+        padding: 0 12px;
+        gap: 8px;
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+      }
+      .brand-duo-logos {
+        gap: 8px;
+      }
+      .logo-gdi-top {
+        height: 44px;
+      }
+      .logo-rotary-top {
+        height: 32px;
+      }
+      .brand-duo-sep {
+        height: 24px;
+      }
+      .brand-text-block {
+        display: none !important;
+      }
+      .nav-right {
+        gap: 6px;
+        margin-left: auto;
+        flex-shrink: 0;
+      }
+      .lang-switcher {
+        padding: 2px 4px;
+        gap: 2px;
+      }
+      .lang-switcher .lang-btn {
+        padding: 4px 6px;
+      }
+      .lang-switcher .lang-btn .lang-code {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block !important;
+        flex-shrink: 0;
+        padding: 6px 10px;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.08);
+      }
       .nav-partner {
         display: none;
       }
@@ -1763,11 +1890,15 @@
   <header class="navbar">
     <div class="container">
       <div class="navbar-inner">
-        <a href="#inicio" class="nav-brand">
-          <img src="./assets/gdi-mascote-escudo.png" alt="Escudo Oficial GDI" class="logo-gdi">
-          <div>
+        <a href="#inicio" class="nav-brand" title="Escolinha GDI & Rotary International">
+          <div class="brand-duo-logos">
+            <img src="./assets/gdi-mascote-escudo.png" alt="Escola GDI" class="logo-gdi-top">
+            <div class="brand-duo-sep"></div>
+            <img src="./assets/rotary-roda-oficial.png" alt="Rotary International" class="logo-rotary-top">
+          </div>
+          <div class="brand-text-block">
             <span class="brand-title">GDI EM CAMPO</span>
-            <span class="brand-tag">2027</span>
+            <span class="brand-sub">PARCERIA ROTARY</span>
           </div>
         </a>
 
@@ -1794,10 +1925,7 @@
             </button>
           </div>
 
-          <div class="nav-partner">
-            <img src="./assets/rotary-roda-oficial.png" alt="Rotary International">
-            <span data-i18n="nav_partner_tag">Parceiro Convidado</span>
-          </div>
+          
 
           <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menu">☰</button>
         </div>
@@ -1848,8 +1976,6 @@
           </div>
 
           <h1 class="hero-title" data-i18n="hero_title">NÃO É SÓ FUTEBOL.<br>É SOBRE OPORTUNIDADE.</h1>
-          <div class="hero-title-en" data-i18n="hero_subtitle">It's not just football. It's about opportunity.</div>
-
           <p class="hero-desc" data-i18n="hero_desc">
             No Aglomerado da Serra, a <strong>Escolinha GDI</strong> trabalha para que crianças e adolescentes tenham espaço para jogar, aprender, competir e construir novos caminhos no esporte e na vida.
           </p>
@@ -1872,7 +1998,7 @@
             </div>
             <span class="stat-mini-sep">/</span>
             <div class="stat-mini-item">
-              <span class="stat-mini-num">8 CATS</span>
+              <span class="stat-mini-num" id="statCatsNum">8 CATEGORIAS</span>
               <span class="stat-mini-label" data-i18n="hero_stat_titulos">Sub-9 ao Sub-16</span>
             </div>
           </div>
@@ -1902,7 +2028,6 @@
       <div class="section-header">
         <span class="section-tagline" data-i18n="campo_tagline">Solo Sagrado • Our Ground</span>
         <h2 class="section-heading" data-i18n="campo_heading">O CAMPO ONDE O SONHO ACONTECE</h2>
-        <div class="section-subheading-en" data-i18n="campo_subheading">Arena Bola de Ouro — The Ground Where Dreams Are Built</div>
         <p class="section-lead" data-i18n="campo_lead">
           Não é o gramado perfeito de um estádio europeu. É chão de terra batida, alambrado simples e poeira. Mas é exatamente aqui que formamos cidadãos de verdade.
         </p>
@@ -1974,7 +2099,6 @@
       <div class="section-header">
         <span class="section-tagline" data-i18n="rot_tagline">Aliança Estratégica • Rotary Partnership</span>
         <h2 class="section-heading" data-i18n="rot_heading">O ROTARY E O GDI: TRANSFORMAÇÃO REAL</h2>
-        <div class="section-subheading-en" data-i18n="rot_subheading">Aligned with Rotary International Global Grants Focus Areas</div>
         <p class="section-lead" data-i18n="rot_lead">
           A Fundação Rotária investe onde há liderança comunitária genuína e impacto duradouro. Esta proposta conecta diretamente os objetivos do Rotary com a juventude da maior comunidade de Minas Gerais.
         </p>
@@ -2018,7 +2142,6 @@
       <div class="section-header">
         <span class="section-tagline" data-i18n="orc_tagline">Transparência Total • Budget Breakdown</span>
         <h2 class="section-heading" data-i18n="orc_heading">ORÇAMENTO OFICIAL — TEMPORADA 2027</h2>
-        <div class="section-subheading-en" data-i18n="orc_subheading">Clear, Auditable & Itemized Budget (Sub-9 to Sub-16)</div>
         <p class="section-lead" data-i18n="orc_lead">
           Cada centavo investido pelo Rotary é rastreável, com prestação de contas periódica, notas fiscais e relatórios fotográficos de entrega.
         </p>
@@ -2180,7 +2303,6 @@
       <div class="section-header">
         <span class="section-tagline" data-i18n="tier_tagline">Como Fazer Parte • Support Tiers</span>
         <h2 class="section-heading" data-i18n="tier_heading">MODALIDADES DE APOIO AO CLUBE</h2>
-        <div class="section-subheading-en" data-i18n="tier_subheading">Tailored Opportunities for Rotary Clubs & Sponsors</div>
         <p class="section-lead" data-i18n="tier_lead">
           Formatos flexíveis de investimento pensados tanto para clubes rotários individuais quanto para parcerias interdistritais.
         </p>
@@ -2282,8 +2404,6 @@
         </div>
 
         <h2 class="closing-h2" data-i18n="close_h2">VAMOS COLOCAR ESSE TIME EM CAMPO JUNTOS?</h2>
-        <div class="closing-h2-en" data-i18n="close_h2_en">Let's put this team on the field together.</div>
-
         <p class="closing-body" data-i18n="close_body">
           Apoiar a Escolinha GDI em 2027 é dar a mais de 100 jovens do Aglomerado da Serra a certeza de que seu talento, esforço e cidadania são valorizados. Estamos prontos para apresentar este projeto formalmente ao clube.
         </p>
@@ -2353,8 +2473,8 @@
         m_orcamento: "04. Resumo Financeiro",
         m_apoio: "05. Formas de Apoio",
         m_contato: "06. Contato Oficial",
-        hero_rotary_badge: "Rotary International • Global Grant Proposal",
-        hero_geo_badge: "Aglomerado da Serra • Belo Horizonte, Brazil",
+        hero_rotary_badge: "Rotary International • Proposta Oficial de Apoio",
+        hero_geo_badge: "Aglomerado da Serra • Belo Horizonte/MG",
         hero_title: "NÃO É SÓ FUTEBOL.<br>É SOBRE OPORTUNIDADE.",
         hero_subtitle: "It's not just football. It's about opportunity.",
         hero_desc: "No Aglomerado da Serra, a <strong>Escolinha GDI</strong> trabalha para que crianças e adolescentes tenham espaço para jogar, aprender, competir e construir novos caminhos no esporte e na vida.",
@@ -2364,10 +2484,11 @@
         hero_stat_atletas: "Atletas Sub-9 ao 16",
         hero_stat_fundacao: "Ano de Fundação",
         hero_stat_titulos: "Sub-9 ao Sub-16",
+        hero_cats_num: "8 CATEGORIAS",
         hero_frame_title: "Terrão da Comunidade",
         hero_frame_sub: "Aglomerado da Serra, Belo Horizonte/MG",
         hero_frame_badge: "Temporada 2027",
-        campo_tagline: "Solo Sagrado • Our Ground",
+        campo_tagline: "Solo Sagrado",
         campo_heading: "O CAMPO ONDE O SONHO ACONTECE",
         campo_subheading: "Arena Bola de Ouro — The Ground Where Dreams Are Built",
         campo_lead: "Não é o gramado perfeito de um estádio europeu. É chão de terra batida, alambrado simples e poeira. Mas é exatamente aqui que formamos cidadãos de verdade.",
@@ -2381,7 +2502,7 @@
         gal_noturno: "Treinos Noturnos • Disciplina Diária",
         gal_competicao: "Competições Oficiais • BH Kids & Taças",
         gal_uniao: "Comunidade Unida • Cidadania no Terrão",
-        rot_tagline: "Aliança Estratégica • Rotary Partnership",
+        rot_tagline: "Aliança Estratégica",
         rot_heading: "O ROTARY E O GDI: TRANSFORMAÇÃO REAL",
         rot_subheading: "Aligned with Rotary International Global Grants Focus Areas",
         rot_lead: "A Fundação Rotária investe onde há liderança comunitária genuína e impacto duradouro. Esta proposta conecta diretamente os objetivos do Rotary com a juventude da maior comunidade de Minas Gerais.",
@@ -2393,7 +2514,7 @@
         axis_2_desc: "Frequência e desempenho escolar monitorados como requisito obrigatório para participar das competições oficiais.",
         axis_3_title: "Liderança Jovem",
         axis_3_desc: "Formação de capitães, respeito mútuo, trabalho em equipe e visão de futuro que transcendem o campo de futebol.",
-        orc_tagline: "Transparência Total • Budget Breakdown",
+        orc_tagline: "Transparência Orçamentária",
         orc_heading: "ORÇAMENTO OFICIAL — TEMPORADA 2027",
         orc_subheading: "Clear, Auditable & Itemized Budget (Sub-9 to Sub-16)",
         orc_lead: "Cada centavo investido pelo Rotary é rastreável, com prestação de contas periódica, notas fiscais e relatórios fotográficos de entrega.",
@@ -2435,7 +2556,7 @@
         sim_res_cat_lbl: "Cobertura do Subsídio",
         sim_res_gov_lbl: "Governança & Prestação",
         sim_cta_btn: "Apoiar Esta Modalidade ↗",
-        tier_tagline: "Como Fazer Parte • Support Tiers",
+        tier_tagline: "Como Fazer Parte",
         tier_heading: "MODALIDADES DE APOIO AO CLUBE",
         tier_subheading: "Tailored Opportunities for Rotary Clubs & Sponsors",
         tier_lead: "Formatos flexíveis de investimento pensados tanto para clubes rotários individuais quanto para parcerias interdistritais.",
@@ -2491,8 +2612,8 @@
         m_orcamento: "04. Financial Summary",
         m_apoio: "05. How to Support",
         m_contato: "06. Official Contact",
-        hero_rotary_badge: "Rotary International • Global Grant Proposal",
-        hero_geo_badge: "Aglomerado da Serra • Belo Horizonte, Brazil",
+        hero_rotary_badge: "Rotary International • Proposta Oficial de Apoio",
+        hero_geo_badge: "Aglomerado da Serra • Belo Horizonte/MG",
         hero_title: "IT'S NOT JUST FOOTBALL.<br>IT'S ABOUT OPPORTUNITY.",
         hero_subtitle: "It's not just football. It's about opportunity.",
         hero_desc: "In Aglomerado da Serra, <strong>Escolinha GDI</strong> empowers children and teens with safe spaces to play, learn, compete, and forge brighter pathways in sports and in life.",
@@ -2502,6 +2623,7 @@
         hero_stat_atletas: "Athletes U-9 to U-16",
         hero_stat_fundacao: "Founded in",
         hero_stat_titulos: "U-9 to U-16 Squads",
+        hero_cats_num: "8 CATEGORIES",
         hero_frame_title: "Community Dirt Pitch",
         hero_frame_sub: "Aglomerado da Serra, Belo Horizonte/MG, Brazil",
         hero_frame_badge: "2027 Season",
@@ -2640,10 +2762,11 @@
         hero_stat_atletas: "Atletas Sub-9 al 16",
         hero_stat_fundacao: "Año de Fundación",
         hero_stat_titulos: "Sub-9 ao Sub-16",
+        hero_cats_num: "8 CATEGORIAS",
         hero_frame_title: "Cancha de Tierra de la Comunidad",
         hero_frame_sub: "Aglomerado da Serra, Belo Horizonte/MG, Brasil",
         hero_frame_badge: "Temporada 2027",
-        campo_tagline: "Suelo Sagrado • Our Ground",
+        campo_tagline: "Suelo Sagrado",
         campo_heading: "LA CANCHA DONDE LOS SUEÑOS SE CONSTRUYEN",
         campo_subheading: "Arena Bola de Ouro — The Ground Where Dreams Are Built",
         campo_lead: "No es el césped perfecto de un estadio europeo. Es tierra rojiza, alambrado humilde y polvo. Pero es exactamente aquí donde formamos ciudadanos de verdad.",
@@ -2657,7 +2780,7 @@
         gal_noturno: "Entrenamientos Nocturnos • Disciplina Diaria",
         gal_competicao: "Competencias Oficiales • BH Kids y Copas",
         gal_uniao: "Comunidad Unida • Ciudadanía en la Cancha",
-        rot_tagline: "Alianza Estratégica • Rotary Partnership",
+        rot_tagline: "Alianza Estratégica",
         rot_heading: "ROTARY Y GDI: TRANSFORMACIÓN REAL",
         rot_subheading: "Alineado con las Áreas de Interés de la Fundación Rotaria",
         rot_lead: "La Fundación Rotaria invierte donde hay liderazgo comunitario auténtico e impacto duradero. Esta propuesta conecta directamente los objetivos de Rotary con la juventud de la mayor favela de Minas Gerais.",
@@ -2669,7 +2792,7 @@
         axis_2_desc: "La asistencia y el buen rendimiento escolar se monitorean rigurosamente como requisito obligatorio para jugar en competencias.",
         axis_3_title: "Liderazgo Juvenil",
         axis_3_desc: "Formación de capitanes, trabajo en equipo, respeto y valores de vida que trascienden el campo de fútbol.",
-        orc_tagline: "Transparencia Total • Budget Breakdown",
+        orc_tagline: "Transparencia Total",
         orc_heading: "PRESUPUESTO OFICIAL — TEMPORADA 2027",
         orc_subheading: "Presupuesto Claro, Auditable y Detallado (Sub-9 a Sub-16)",
         orc_lead: "Cada recurso invertido por Rotary es 100% auditable, con rendición periódica de cuentas, facturas oficiales y reportes fotográficos de entrega.",
@@ -2709,7 +2832,7 @@
         sim_res_cat_lbl: "Alcance del Proyecto",
         sim_res_gov_lbl: "Gobernanza y Reportes",
         sim_cta_btn: "Apoyar Esta Modalidad ↗",
-        tier_tagline: "Cómo Participar • Support Tiers",
+        tier_tagline: "Cómo Participar",
         tier_heading: "MODALIDADES DE APOYO AL CLUB",
         tier_subheading: "Oportunidades a Medida para Clubes Rotarios y Patrocinadores",
         tier_lead: "Formatos flexibles de inversión diseñados tanto para clubes individuales como para alianzas interdistritales o subvenciones globales.",
@@ -2772,6 +2895,12 @@
       });
 
       // Aplica traduções a todos os elementos com data-i18n
+      
+      const catsEl = document.getElementById('statCatsNum');
+      if (catsEl && translations[lang].hero_cats_num) {
+        catsEl.textContent = translations[lang].hero_cats_num;
+      }
+
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
