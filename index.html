@@ -2701,7 +2701,7 @@
           <div class="sim-opt-btn active" data-sim="1">
             <span class="sim-opt-tag" data-i18n="sim_opt1_tag">Modalidade 01</span>
             <div class="sim-opt-title" data-i18n="sim_opt1_title">Apoio a 1 Categoria</div>
-            <div class="sim-opt-price" id="simVal1">R$ 3.000,00</div>
+            <div class="sim-opt-price" id="simVal1">R$ 2.500,00</div>
           </div>
 
           <div class="sim-opt-btn" data-sim="2">
@@ -2748,7 +2748,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tagline" data-i18n="tier_tagline">Como Apoiar</span>
-        <h2 class="section-heading" data-i18n="tier_heading">MODALIDADES DE APOIO AO CLUBE</h2>
+        <h2 class="section-heading" data-i18n="tier_heading">FORMATOS FLEXÍVEIS DE INVESTIMENTO</h2>
         <p class="section-lead" data-i18n="tier_lead">
           Formatos flexíveis de investimento pensados tanto para clubes rotários individuais quanto para parcerias interdistritais.
         </p>
@@ -2759,7 +2759,7 @@
         <div class="tier-box">
           <div>
             <div class="tier-header-tag" data-i18n="t1_tag">Modalidade 01 • Categoria Única</div>
-            <div class="tier-amount" id="tierVal1">R$ 3.000</div>
+            <div class="tier-amount" id="tierVal1">R$ 2.500</div>
             <div class="tier-name" data-i18n="t1_name">Custeio de 1 Categoria</div>
             <ul class="tier-bullets">
               <li data-i18n="t1_b1">15 jovens de uma categoria (ex: Sub-11) inscritos em campeonatos oficiais</li>
@@ -3020,7 +3020,7 @@
         sim_res_gov_lbl: "Governança & Prestação",
         sim_cta_btn: "Apoiar Esta Modalidade ↗",
         tier_tagline: "Como Fazer Parte",
-        tier_heading: "MODALIDADES DE APOIO AO CLUBE",
+        tier_heading: "FORMATOS FLEXÍVEIS DE INVESTIMENTO",
         tier_subheading: "Tailored Opportunities for Rotary Clubs & Sponsors",
         tier_lead: "Formatos flexíveis de investimento pensados tanto para clubes rotários individuais quanto para parcerias interdistritais.",
         t1_tag: "Modalidade 01 • Categoria Única",
@@ -3422,12 +3422,12 @@
       document.getElementById('valTableGrandTotal').textContent = formatMoney(47401.32, currentCurrency);
 
       // Simulador Preços
-      document.getElementById('simVal1').textContent = formatMoney(3000.00, currentCurrency);
+      document.getElementById('simVal1').textContent = formatMoney(2500.00, currentCurrency);
       document.getElementById('simVal2').textContent = formatMoney(7040.00, currentCurrency);
       document.getElementById('simVal3').textContent = formatMoney(47401.32, currentCurrency);
 
       // Tiers Preços
-      document.getElementById('tierVal1').textContent = formatMoney(3000.00, currentCurrency).replace(/,00|\.00/g, '');
+      document.getElementById('tierVal1').textContent = formatMoney(2500.00, currentCurrency).replace(/,00|\.00/g, '');
       document.getElementById('tierVal2').textContent = formatMoney(7040.00, currentCurrency).replace(/,00|\.00/g, '');
       document.getElementById('tierVal3').textContent = formatMoney(47401.32, currentCurrency).replace(/,00|\.00/g, '');
     }
